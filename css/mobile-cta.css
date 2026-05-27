@@ -17,13 +17,10 @@
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.08);
   padding: 10px 12px;
+  padding-left: max(12px, calc(12px + env(safe-area-inset-left)));
+  padding-right: max(12px, calc(12px + env(safe-area-inset-right)));
+  padding-bottom: max(10px, calc(10px + env(safe-area-inset-bottom)));
   height: var(--cta-h);
-}
-
-@media (max-width: 768px) {
-  .fw-mobile-cta {
-    display: flex;
-  }
 }
 
 .fw-mobile-cta-inner {
@@ -96,7 +93,7 @@
   transform: scale(0.98);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .fw-mobile-cta {
     display: none !important;
   }

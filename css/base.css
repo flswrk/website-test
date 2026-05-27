@@ -54,7 +54,7 @@
 
 /* ── RESET ──────────────────────────────────────────────────── */
 *,*::before,*::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; overflow-x: clip; }
+html { scroll-behavior: smooth; overflow-x: clip; overflow-y: scroll; padding-left: max(0px, env(safe-area-inset-left)); padding-right: max(0px, env(safe-area-inset-right)); }
 body { margin:0; padding:0; background:var(--bg); color:var(--ink-soft);
   font-family:var(--sans); font-size:16px; line-height:1.65;
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; overflow-x:clip; }
@@ -848,19 +848,6 @@ body.fw-nav-open { overflow:hidden; position:fixed; width:100%; }
   .quiz-q          { font-size:26px; }
 }
 
-/* ── 480px ──────────────────────────────────────────────────── */
-@media (max-width: 480px) {
-  :root { --gutter: 16px; }
-  .doctors-grid    { grid-template-columns:1fr; }
-  .advantage-grid  { grid-template-columns:1fr; }
-  .partner-strip   { grid-template-columns:1fr 1fr; }
-  .stats-strip     { grid-template-columns:repeat(2,1fr); }
-  .review-text     { font-size:17px; }
-  .footer-grid     { grid-template-columns:1fr; }
-  .footer-brand    { grid-column:span 1; }
-  .timeline-grid   { grid-template-columns:1fr; }
-  .compare-table th:last-child, .compare-table td:last-child { display:none; }
-}
 
 /* ── PRINT ──────────────────────────────────────────────────── */
 @media print {
