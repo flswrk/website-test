@@ -43,15 +43,8 @@
     phoneBtn.innerHTML = SVG_PHONE + '<span>Call</span>';
     phoneBtn.setAttribute('data-track', 'mobile_cta_call');
 
-    var bookBtn = document.createElement('a');
-    bookBtn.href = 'contact.html';
-    bookBtn.className = 'fw-mobile-cta-btn fw-mobile-cta-btn--book';
-    bookBtn.innerHTML = SVG_CALENDAR + '<span>Book</span>';
-    bookBtn.setAttribute('data-track', 'mobile_cta_book');
-
     inner.appendChild(waBtn);
     inner.appendChild(phoneBtn);
-    inner.appendChild(bookBtn);
 
     cta.appendChild(inner);
 

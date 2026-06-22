@@ -40,14 +40,15 @@
   function injectFloats() {
     var html = [
 
-      /* ── Call FAB ── */
+      /* ── WhatsApp FAB (desktop only) ── */
       '<a id="call-fab"',
-      '   href="tel:' + getPhone() + '"',
-      '   aria-label="Call Flosswork Dental Clinic"',
-      '   data-track="call_fab_click">',
+      '   href="' + waLink('fab') + '"',
+      '   target="_blank" rel="noopener noreferrer"',
+      '   aria-label="Chat on WhatsApp"',
+      '   data-track="wa_fab_click">',
       '  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"',
       '       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">',
-      '    <path d="M5 4h3l2 5-2 1a11 11 0 006 6l1-2 5 2v3a2 2 0 01-2 2A17 17 0 013 6a2 2 0 012-2z"/>',
+      '    <path d="M20 12a8 8 0 01-12.2 6.8L3 20l1.3-4.7A8 8 0 1120 12z"/>',
       '  </svg>',
       '</a>',
 

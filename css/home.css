@@ -280,6 +280,21 @@ a.hero-split-img .hero-img-wrap {
   margin-bottom: 8px;
 }
 
+.feature-pills--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.feature-pills--grid .feature-pill {
+  white-space: nowrap;
+  justify-content: center;
+  font-size: clamp(11px, 2.8vw, 13px);
+  padding: 10px 8px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .feature-pill {
   display: inline-flex;
   align-items: center;
@@ -594,10 +609,11 @@ a.hero-split-img .hero-img-wrap {
   }
 
   /* On mobile the portrait image becomes too tall — use landscape */
-  .hero-split-img .placeholder { aspect-ratio: 3/2 !important; }
+  .hero-split-img .placeholder,
+  .spotlight-visual-img-wrap .placeholder { aspect-ratio: 3/2 !important; }
 
   /* Floating card hidden on mobile (too cramped in landscape ratio) */
-  .hero-split-img .hero-float { display: none; }
+  /* hero-float visible on mobile too */
 
   /* Hover cue irrelevant on touch */
   .hero-img-cue { display: none; }
@@ -617,11 +633,12 @@ a.hero-split-img .hero-img-wrap {
   }
 
   .spotlight-float {
-    position: static;
-    margin-top: 16px;
-    right: auto;
-    bottom: auto;
-    width: 100%;
+    position: absolute;
+    right: clamp(12px, 4vw, 20px);
+    bottom: clamp(12px, 4vw, 20px);
+    margin-top: 0;
+    width: auto;
+    min-width: clamp(140px, 45vw, 200px);
   }
 
   .spotlight-img-cue { display: none; } /* hover cue irrelevant on touch */
